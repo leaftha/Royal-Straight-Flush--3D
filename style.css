@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #fff;
+}
+
+.world {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transition: 1s;
+  transform-style: preserve-3d;
+  margin: 20px;
+}
+
+.card.open {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.card-face-back {
+  background: url(img/back.png) no-repeat center / contain;
+}
+.a .card-face-front {
+  background: url(img/ace.png) no-repeat center / contain;
+  transform: rotateY(180deg);
+}
+.k .card-face-front {
+  background: url(img/king.png) no-repeat center / contain;
+  transform: rotateY(180deg);
+}
+.q .card-face-front {
+  background: url(img/qeeun.png) no-repeat center / contain;
+  transform: rotateY(180deg);
+}
+.j .card-face-front {
+  background: url(img/jack.png) no-repeat center / contain;
+  transform: rotateY(180deg);
+}
+.ten .card-face-front {
+  background: url(img/10.png) no-repeat center / contain;
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  pointer-events: none;
+}
